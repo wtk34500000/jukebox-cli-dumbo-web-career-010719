@@ -53,9 +53,10 @@ end
 
 def run(songs)
   help
-  puts "Please enter a command:"
-  input = gets.chomp
+  input=nil
   while input != "exit"
+    puts "Please enter a command:"
+    input = gets.chomp.downcase
     if input == "list"
       list(songs)
     elsif input == "play"
