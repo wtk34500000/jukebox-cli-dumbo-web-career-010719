@@ -27,10 +27,13 @@ def play(songs)
       songs.each do |song|
        if song == input
          puts "Playing #{song}"
+        else
+          puts 
        end
       end
     else
-      song 
+      if input <= song.length
+        
   end
 end
 
