@@ -21,7 +21,8 @@ end
 
 def play(songs)
   puts "Please enter a song name or number:"
-  input=gets.chomp.to_i
+  input=gets.chomp
+  new_input=input.to_i
 
     if input == 0
       songs.each do |song|
