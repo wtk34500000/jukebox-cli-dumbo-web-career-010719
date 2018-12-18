@@ -21,20 +21,19 @@ end
 
 def play(songs)
   puts "Please enter a song name or number:"
-  input=gets.chomp
-  new_input=input.to_i
-
-    if input == 0
-      songs.each do |song|
-       if song == input
-         puts "Playing #{song}"
+  song_name=gets.chomp
+  song_number=song_name.to_i
+  
+    if song_number == 0
+       if songs.include?(song_name)
+          puts "Playing #{song_name}"
         else
           puts "Invalid input, please try again"
        end
-      end
+    
     else
-      if new_input <= song.length
-        puts "Playing #{songs[input-1]}"
+      if song_number <= songs.length
+        puts "Playing #{songs[song_number-1]}"
       else
         puts "Invalid input, please try again"
        end
