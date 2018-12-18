@@ -21,18 +21,16 @@ end
 
 def play(songs)
   puts "Please enter a song name or number:"
-  input=gets.chomp
-  
-  if input.class == Integer
-     puts "Playing #{songs[input-1]}"
-  elsif input.class == String
-    songs.each do |song|
-      if song == input
-        puts "Playing #{song}"
+  input=gets.chomp.to_i
+
+    if input == 0
+      songs.each do |song|
+       if song == input
+         puts "Playing #{song}"
+       end
       end
-    end
-  else
-    puts "Invalid input, please try again"
+    else
+      song 
   end
 end
 
