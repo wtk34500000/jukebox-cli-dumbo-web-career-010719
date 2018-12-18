@@ -33,7 +33,7 @@ def play(songs)
        end
       end
     else
-      if input <= song.length
+      if new_input <= song.length
         puts "Playing #{songs[input-1]}"
       else
         puts "Invalid input, please try again"
